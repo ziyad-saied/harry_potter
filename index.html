@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/fav.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Raleway:wght@300;400;500&family=Work+Sans:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c75b91d35b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--start settings box  -->
+    <div class="settingBox">
+      <i
+        class="fa-solid fa-gear"
+        onclick="showSettingBox()"
+        style="margin-right: -5px"
+      ></i>
+      <div class="settingContent">
+        <div class="optionBox">
+          <h4>Colors</h4>
+          <ul class="colorList">
+            <li class="active" data-color="chocolate"></li>
+            <li data-color="#E91E63"></li>
+            <li data-color="#009688"></li>
+            <li data-color="#03A9F4"></li>
+            <li data-color="#4CAF50"></li>
+          </ul>
+        </div>
+
+        <div class="optionBox">
+          <h4>Random Background</h4>
+          <div class="randomBackgrounds">
+            <span class="yes active" onclick="randomizeYesOption()">Yes</span>
+            <span class="no" onclick="randomizeNoOption()">No</span>
+          </div>
+        </div>
+
+        <div class="navDock">
+          <h4>Navigation Dock</h4>
+          <div class="showDock">
+            <span class="yes active" onclick="showDock()">Yes</span>
+            <span class="no" onclick="hideDock()">No</span>
+          </div>
+        </div>
+        <button class="resetOption">Reset Options</button>
+      </div>
+    </div>
+    <!--end settings box  -->
+
+    <!-- start landing page  -->
+    <div class="landingPage">
+      <div class="overlay"></div>
+      <div class="headerArea">
+        <div class="logo">
+          <img src="images/My project.png" alt="harry potter loge " />
+        </div>
+        <ul class="links">
+          <li><a href="#about" class="active"> About</a></li>
+          <li><a href="#skills"> Skills</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </div>
+
+      <div class="introduction">
+        <h1>Harry Potter</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
+          quibusdam dolores necessitatibus distinctio eos aliquam, cum ullam
+          ipsum assumenda Lorem, ipsum dolor sit amet consectetur adipisicing
+          elit. Praesentium, ipsa? Id eaque dignissimos quod quibusdam inventore
+          dolor repellendus unde quaerat est autem .
+        </p>
+      </div>
+    </div>
+    <!-- end landing page  -->
+
+    <!-- start about  -->
+    <div id="about" class="about">
+      <div class="aboutInfo">
+        <h2>
+          <i class="fa-solid fa-wand-sparkles" style="padding-right: 10px"></i
+          >About
+          <i class="fa-solid fa-wand-sparkles" style="padding-left: 10px"></i>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam
+          repellat dolore ipsa, laudantium vero soluta. Pariatur iure ea
+          excepturi iusto, laudantium nam esse facilis modi veritatis ullam quo!
+          Ratione, ex.
+        </p>
+      </div>
+      <div class="imageBox">
+        <img
+          src="images/commissions-illustration.svg"
+          alt="App"
+          width="100%"
+          onmouseover="showAlien()"
+          onmouseout="hideAlien()"
+        />
+      </div>
+    </div>
+    <!-- end about  -->
+
+    <!-- start skills  -->
+
+    <div id="skills" class="skills">
+      <h2>My Skills</h2>
+      <div class="skillBox">
+        <div class="skillName">
+          <p>Html</p>
+          <p>Css</p>
+          <p>JavaScript</p>
+        </div>
+        <div class="skillProgressBox">
+          <div class="skillProgress"><span data-progress="80%"></span></div>
+          <div class="skillProgress"><span data-progress="70%"></span></div>
+          <div class="skillProgress"><span data-progress="60%"></span></div>
+        </div>
+      </div>
+    </div>
+    <!-- end skills  -->
+
+    <!-- start gallery  -->
+    <div class="gallery">
+      <h2>Gallery</h2>
+      <div class="images-box">
+        <div class="box">
+          <img src="images/1.jpg" alt="Voldemort" />
+        </div>
+        <div class="box">
+          <img src="images/2.jpg" alt="Harry potter" />
+        </div>
+        <div class="box">
+          <img src="images/3.jpg" alt="Harry potter" />
+        </div>
+        <div class="box">
+          <img src="images/4.jpg" alt="Harry potter" />
+        </div>
+        <div class="box">
+          <img src="images/5.jpg" alt="Harry potter" />
+        </div>
+        <div class="box">
+          <img src="images/6.jpg" alt="Harry potter" />
+        </div>
+        <div class="box">
+          <img src="images/7.jpg" alt="Harry potter" />
+        </div>
+        <div class="box">
+          <img src="images/8.jpg" alt="Harry potter" />
+        </div>
+        <div class="box">
+          <img src="images/9.jpg" alt="Dumbledore" />
+        </div>
+        <div class="box">
+          <img src="images/10.jpg" alt="Voldemort" />
+        </div>
+      </div>
+    </div>
+
+    <!-- end gallery  -->
+
+    <!-- start timeline  -->
+    <div class="timeline">
+      <div class="year">2018</div>
+      <div class="timelineContent">
+        <div class="left">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
+              voluptatum fugiat officia dicta, consequatur odio, similique iste
+              debitis corrupti ratione consequuntur accusamus fugit praesentium
+              qui deleniti obcaecati assumenda illo ex!
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
+              voluptatum fugiat officia dicta, consequatur odio, similique iste
+              debitis corrupti ratione consequuntur accusamus fugit praesentium
+              qui deleniti obcaecati assumenda illo ex!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="year">2022</div>
+      <div class="timelineContent">
+        <div class="left">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
+              voluptatum fugiat officia dicta, consequatur odio, similique iste
+              debitis corrupti ratione consequuntur accusamus fugit praesentium
+              qui deleniti obcaecati assumenda illo ex!
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="content">
+            <h3>Testing</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet
+              voluptatum fugiat officia dicta, consequatur odio, similique iste
+              debitis corrupti ratione consequuntur accusamus fugit praesentium
+              qui deleniti obcaecati assumenda illo ex!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end timeline  -->
+
+    <!-- start features  -->
+    <div class="features">
+      <h2>Our Features</h2>
+      <div class="featuresContainer">
+        <div class="featureBox">
+          <img src="images/Icon_01.png" alt="cam" />
+          <h4>Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            vero? Molestiae nulla maxime exercitationem in
+          </p>
+        </div>
+        <div class="featureBox">
+          <img src="images/Icon_02.png" alt="cam" />
+          <h4>Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            vero? Molestiae nulla maxime exercitationem in
+          </p>
+        </div>
+        <div class="featureBox">
+          <img src="images/Icon_03.png" alt="cam" />
+          <h4>Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            vero? Molestiae nulla maxime exercitationem in
+          </p>
+        </div>
+        <div class="featureBox">
+          <img src="images/Icon_04.png" alt="cam" />
+          <h4>Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            vero? Molestiae nulla maxime exercitationem in
+          </p>
+        </div>
+        <div class="featureBox">
+          <img src="images/Icon_05.png" alt="cam" />
+          <h4>Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            vero? Molestiae nulla maxime exercitationem in
+          </p>
+        </div>
+        <div class="featureBox">
+          <img src="images/Icon_06.png" alt="cam" />
+          <h4>Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+            vero? Molestiae nulla maxime exercitationem in
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end features  -->
+
+    <!-- start test   -->
+    <div class="test">
+      <h2>Testimonials</h2>
+      <div class="testContainer">
+        <div class="testBox">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
+            necessitatibus deleniti quia provident.
+          </p>
+          <div class="personTest">
+            <div class="personIcon">
+              <img src="images/Icon_01.png" alt="icon" />
+            </div>
+            <div class="personInfo">
+              <h4>Mohammed Ziyad</h4>
+              <p>CIO Of ZSA</p>
+            </div>
+          </div>
+        </div>
+        <div class="testBox">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
+            necessitatibus deleniti quia provident.
+          </p>
+          <div class="personTest">
+            <div class="personIcon">
+              <img src="images/Icon_01.png" alt="icon" />
+            </div>
+            <div class="personInfo">
+              <h4>Mohammed Ziyad</h4>
+              <p>CIO Of ZSA</p>
+            </div>
+          </div>
+        </div>
+        <div class="testBox">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
+            necessitatibus deleniti quia provident.
+          </p>
+          <div class="personTest">
+            <div class="personIcon">
+              <img src="images/Icon_01.png" alt="icon" />
+            </div>
+            <div class="personInfo">
+              <h4>Mohammed Ziyad</h4>
+              <p>CIO Of ZSA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end test   -->
+
+    <!-- start bullets  -->
+    <div class="bulletContainer">
+      <div class="bullet" data-section=".about">
+        <div class="bullettip">About</div>
+      </div>
+      <div class="bullet" data-section=".skills">
+        <div class="bullettip">Skills</div>
+      </div>
+      <div class="bullet" data-section=".gallery">
+        <div class="bullettip">Gallery</div>
+      </div>
+      <div class="bullet" data-section=".features">
+        <div class="bullettip">Features</div>
+      </div>
+    </div>
+    <!-- end bullets  -->
+
+    <!-- start contact us -->
+    <div class="contact">
+      <div class="contactOverlay"></div>
+      <div class="contactContainer">
+        <h2>Contact Us</h2>
+
+        <form action="#" class="contactForm">
+          <div class="leftBox">
+            <input type="text" name="userName" id="#" placeholder="Your Name" />
+            <input type="tel" name="userPhone" placeholder="Your Phone" />
+            <input type="email" name="userEmail" id="#" placeholder="Email" />
+            <input type="text" name="subject" id="#" placeholder="Subject" />
+          </div>
+
+          <div class="rightBox">
+            <textarea name="message" id="#" placeholder="Message"></textarea>
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end contact us -->
+
+    <!-- start footer  -->
+    <!-- <footer>
+      <a target="_blank" href="https://www.facebook.com/ziyadsaied1/"
+        ><i class="fa-brands fa-facebook"></i>Facebook</a
+      >
+      <a target="_blank" href="https://github.com/ziyad-saied"
+        ><i class="fa-brands fa-github"></i>Github</a
+      >
+    </footer> -->
+    <!-- end footer  -->
+    <script src="js/start.js"></script>
+  </body>
+</html>
