@@ -222,3 +222,36 @@ document.querySelector(".resetOption").onclick = function () {
     localStorage.removeItem("colorOption");
     window.location.reload();
 }
+
+
+//toggle menu
+
+let toggle = document.querySelector('.headerArea .linksContainer .menuToggle');
+
+let links = document.querySelector('.headerArea .links');
+
+toggle.onclick = function (e) {
+    //stop propagation
+    e.stopPropagation();
+    // show the arrow for the toggle menu 
+    this.classList.toggle("menuActive");
+    // show the links menu 
+    links.classList.toggle("openLinks");
+}
+
+
+//hide the toggle menu when click on any place except the menu 
+document.addEventListener("click", (e => {
+    if (e.target !== toggle && e.target !== links) {
+        if (links.classList.contains('openLinks')) {
+        // show the arrow for the toggle menu 
+        toggle.classList.toggle("menuActive");
+        // show the links menu 
+        links.classList.toggle("openLinks");
+        }
+    }
+}))
+
+links.onclick = function (e) {
+    e.stopPropagation();
+}
